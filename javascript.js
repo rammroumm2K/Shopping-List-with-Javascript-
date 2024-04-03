@@ -50,3 +50,17 @@ const itemInput = document.getElementById("itemInput");
         updateLocalStorage();
       }
     });
+
+    function calcola() {
+      var stipendio = document.getElementById("stipendio").value;
+      var affitto = stipendio * 0.5;
+      var fabbisogno = stipendio * 0.3;
+      var risparmio = stipendio * 0.2;
+      
+      var risultato = "<p>Stipendio : " + stipendio + "€</p>";
+      risultato += "<p>Affitto e fatture: " + affitto + "€ (" + (affitto/stipendio)*100 + "%)</p>";
+      risultato += "<p>Fabbisogno: " + fabbisogno + "€ (" + (fabbisogno/stipendio)*100 + "%)</p>";
+      risultato += "<p>Risparmio: " + risparmio + "€ (" + (risparmio/stipendio)*100 + "%)</p>";
+      
+      document.getElementById("risultato").innerHTML = risultato;
+  }
